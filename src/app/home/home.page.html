@@ -1,14 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      City Movies
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content >
+  <!-- <ion-img id="img2" src=""></ion-img> -->
+  <ion-card class="card1" *ngFor="let m of movies">
+      <ion-img id="img2" src="{{m.image_url}}"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{m.production_house}}</ion-card-subtitle>
+        <ion-card-title>{{m.name}}</ion-card-title>
+        <h5>*****</h5>
+      </ion-card-header>
+    <ion-button id="button1" (click)="myMovieDetails(m)">Book Now</ion-button>
+      
+    </ion-card>
 </ion-content>
